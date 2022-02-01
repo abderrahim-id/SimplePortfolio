@@ -118,6 +118,29 @@ a {
                 i{  color: $base-blue;  }
             }
         }
+        .all-interests{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            .an-interest{
+                background-color: $base-blue;
+                color: $white-color;
+                width: calc(50% - 5px);
+                text-align: center;
+                font-family: "Roboto", sans-serif;
+                padding: 10px 0;
+            }
+        }
+        .download-cv{
+            background-color: $base-blue;
+                color: $white-color;
+                width: calc(50% - 5px);
+                text-align: center;
+                font-family: "Roboto", sans-serif;
+                padding: 10px 0;
+                margin-bottom: 30px;
+                cursor: pointer;
+        }
     }
     .social-media {
         width: 100%;
@@ -141,8 +164,8 @@ a {
 .right-side{
     height: calc(100vh - 20px);
     width: calc(100vw - 20px - 290px) ;
-    // background-color: $base-blue;
-    // opacity: 20%;
+    background-color: $base-blue;
+    opacity: 20%;
     position: fixed;
     left: 300px;
 }
