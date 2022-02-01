@@ -1,0 +1,8 @@
+// Call the function by this : @include flexIt();
+
+@mixin flexIt($justifyContent, $align-items, $direction) { 
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $align-items;
+    flex-direction: $direction;
+  }
