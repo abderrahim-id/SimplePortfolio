@@ -39,6 +39,22 @@ a {
     color: $base-grey;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-in-need {
+    overflow: auto;
+}
+.scrollbar-in-need::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-in-need {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.item-p{ font-weight: 200;}
+.item-h4{ font-weight: 300;}
+
 // ______________________________________________ Styles
 
 .left-side {
@@ -66,28 +82,40 @@ a {
             border: $base-grey solid 1px;
         }
     }
-    .profile-informations{
+    .profile-informations {
         padding: 0 30px;
         height: calc(100vh - 305px);
-        overflow: auto;
-        .general-info{
+        .general-info {
             @include flexIt(space-between, center, row);
             margin: 10px 0;
         }
-        .profile-title{
+        .profile-title {
             padding-bottom: 20px;
         }
-        .a-lang{
+        .a-lang {
             padding: 10px 0;
-            .lang-info{ @include flexIt(space-between, center, row); padding-bottom: 5px;}
-            .lang-perce{
+            .lang-info {
+                @include flexIt(space-between, center, row);
+                padding-bottom: 5px;
+            }
+            .lang-perce {
                 background-color: $white-color;
                 height: 7px;
                 width: 100%;
-                .lang-perce-col{
+                .lang-perce-col {
                     height: 100%;
                     background-color: $base-blue;
                 }
+            }
+        }
+        .the-qualities{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            .a-quality{
+                @include flexIt(flex-start, center, row);
+                gap: 10px;
+                i{  color: $base-blue;  }
             }
         }
     }
@@ -108,4 +136,13 @@ a {
             color: $base-blue;
         }
     }
+}
+
+.right-side{
+    height: calc(100vh - 20px);
+    width: calc(100vw - 20px - 290px) ;
+    // background-color: $base-blue;
+    // opacity: 20%;
+    position: fixed;
+    left: 300px;
 }
